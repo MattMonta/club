@@ -1,0 +1,9 @@
+<div class="container">
+  <% if logged_in? %>
+    <h1 class="text-center">Bienvenue <%= @current_user.first_name %> !</h1>
+    <p class="text-center"><%= link_to "Le club", private_path%>.</p>
+  <% else %>
+    <h1 class="text-center">Bienvenue!</h1>
+    <p class="text-center"> <%=link_to "Connexion", login_path%> ou <%=link_to "Créer un compte", new_user_path%>.</p>
+  <% end %>
+</div>

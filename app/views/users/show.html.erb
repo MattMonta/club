@@ -1,0 +1,25 @@
+<p class="text-center">Comment ça va <%= @user.first_name %> ? </p> <br/>
+
+<p class="text-center"> <strong> Informations:</strong></p> <br />
+
+<div class="text-center">
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Prénom</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @user.last_name %></td>
+        <td><%= @user.first_name %></td>
+        <td><%= @user.email %></td>
+    </tbody>
+  </table>
+</div>
+
+<p class="text-center"><%= link_to "Editer mon profil", edit_user_path, class: "btn btn-outline-primary" %> </p>
+
+<p class="text-center"><%= link_to "Retour à l'accueil", root_path, class: "btn btn-outline-primary" %> </p>
